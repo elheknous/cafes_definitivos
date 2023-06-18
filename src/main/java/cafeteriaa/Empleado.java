@@ -1,3 +1,5 @@
+package cafeteriaa;
+
 public class Empleado {
     private String nombre;
     private String cargo;
@@ -19,7 +21,7 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" +
+        return "cafeteriaa.Empleado{" +
                 "nombre='" + nombre + '\'' +
                 ", cargo='" + cargo + '\'' +
                 ", edad=" + edad +

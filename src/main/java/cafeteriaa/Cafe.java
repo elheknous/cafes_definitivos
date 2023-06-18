@@ -1,3 +1,5 @@
+package cafeteriaa;
+
 public class Cafe {
     private String gramos;
     private String agua;
@@ -12,6 +14,9 @@ public class Cafe {
         this.precio = 2000;
     }
 
+    public String registroCSV(){
+        return "CAFE, "+this.gramos+","+this.agua+","+this.tamano+","+String.valueOf(this.precio)+"\n";
+    }
     public int getPrecio() {
         return precio;
     }
@@ -37,7 +42,7 @@ public class Cafe {
 
     @Override
     public String toString() {
-        return "Cafe{" +
+        return "cafeteriaa.Cafe{" +
                 "gramos=" + gramos + " gm" +
                 ", agua=" + agua + " ml" +
                 ", tamano='" + tamano + '\'' +

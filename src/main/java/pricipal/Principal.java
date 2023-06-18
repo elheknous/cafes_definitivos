@@ -1,3 +1,8 @@
+package pricipal;
+
+import cafeteriaa.*;
+import utils.GestorDatos;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -120,6 +125,7 @@ public class Principal {
         int num = 0;
         int opcion = 0;
         int num1 = 0;
+        String frase = "Compra: \n"+"Cliente: "+c.getNombre()+"\n";
         do {
             System.out.println("Ingrese la opcion de lo que desea llevar: ");
             System.out.println("Precio cafe: 2000");
@@ -131,11 +137,16 @@ public class Principal {
             opcion = aux.opcionCompras(cafeteria.getCafes().size() + cafeteria.getAlfajores().size() + 1);
             if (opcion <= cafeteria.getCafes().size()){
                 cafeComprados.add(cafeteria.getCafes().get(opcion-1));
+                frase = frase+ cafeteria.getCafes().get(opcion-1).registroCSV();
             }if (opcion> cafeteria.getCafes().size() && opcion <num1){
                 alfajoresComprados.add(cafeteria.getAlfajores().get(opcion-cafeteria.getCafes().size()-1));
+                frase += frase + cafeteria.getAlfajores().get(opcion-cafeteria.getCafes().size()-1).registroCSV();
+
             }
 
         }while (opcion < num1);
+        GestorDatos g = new GestorDatos();
+        g.escribirCSV(frase);
 
         pago(cafeteria,c,cafeComprados,alfajoresComprados);
     }

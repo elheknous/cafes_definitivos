@@ -1,3 +1,5 @@
+package cafeteriaa;
+
 public class Alfajor {
     private String sabor;
     private String tamano;
@@ -9,7 +11,9 @@ public class Alfajor {
         this.tamano = tamano;
         this.precio = 1000;
     }
-
+    public String registroCSV(){
+        return "Alfajor, "+this.sabor+","+this.tamano+","+String.valueOf(this.precio)+"\n";
+    }
     public String getSabor() {
         return sabor;
     }
@@ -29,7 +33,7 @@ public class Alfajor {
 
     @Override
     public String toString() {
-        return "Alfajor{" +
+        return "cafeteriaa.Alfajor{" +
                 "sabor='" + sabor + '\'' +
                 ", tamano='" + tamano + '\'' +
                 '}';

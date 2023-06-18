@@ -1,3 +1,5 @@
+package cafeteriaa;
+
 import java.util.ArrayList;
 
 public class Cliente {
@@ -6,6 +8,13 @@ public class Cliente {
     private int dinero;
 
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public Cliente(String nombre, int edad, int dinero) {
         this.nombre = nombre;
@@ -20,7 +29,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
+        return "cafeteriaa.Cliente{" +
                 "nombre='" + nombre + '\'' +
                 ", edad=" + edad +
                 ", dinero=" + dinero +

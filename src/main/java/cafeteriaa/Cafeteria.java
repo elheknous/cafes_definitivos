@@ -1,5 +1,6 @@
+package cafeteriaa;
+
 import java.util.ArrayList;
-import java.util.SplittableRandom;
 
 public class Cafeteria {
     private String nombre;
@@ -19,6 +20,7 @@ public class Cafeteria {
         this.alfajores = alfajores;
         this.empleados = empleados;
     }
+
 
 
     public void agregarCafe(String g, String a, String t){
@@ -93,7 +95,7 @@ public class Cafeteria {
 
     @Override
     public String toString() {
-        return "Cafeteria{" +
+        return "cafeteriaa.Cafeteria{" +
                 "nombre='" + nombre + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", redesSocioales=" + redesSocioales +
